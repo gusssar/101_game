@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gusssar.alexeev.podschet_kart_2.WelcomeActivity">
+
+    <TextView
+    android:id="@+id/Title"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="15dp"
+    android:textSize="18dp"
+    android:textColor="@color/colorTitle"
+    android:layout_height="wrap_content"
+    android:text="@string/welcome_text"/>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/Title"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+        <Button
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:id="@+id/StartGameTwo"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/two_player"
+            android:layout_weight="1"
+            android:onClick="GoToGameTwo"
+            />
+        <Button
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:id="@+id/StartGameThree"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/three_player"
+            android:layout_weight="1"
+            android:onClick="GoToGameThree"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+        <Button
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:id="@+id/StartGameFour"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/four_player"
+            android:layout_weight="1"
+            android:onClick="GoToGameFour"
+            />
+        <Button
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:id="@+id/StartGameFive"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/five_player"
+            android:layout_weight="1"
+            android:onClick="GoToGameFive"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
+        <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:id="@+id/GameInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Info"
+            android:text="@string/game_rules"
+            />
+
+        <ImageButton
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:id="@+id/imageButtonRules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:onClick="Info"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+        <ImageButton
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:id="@+id/imageButtonPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Info"
+            app:srcCompat="@android:drawable/ic_menu_help" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
