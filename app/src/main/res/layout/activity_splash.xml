@@ -13,13 +13,13 @@
         android:src="@drawable/sky" />
 
     <ImageView
-        android:id="@+id/sun"
+        android:id="@+id/label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/sun"
         android:scaleType="fitCenter"
-        android:src="@drawable/sun" />
+        android:src="@drawable/ic_101_label" />
 
     <ImageView
         android:id="@+id/grass"
@@ -28,5 +28,26 @@
         android:layout_alignParentBottom="true"
         android:contentDescription="@string/grass"
         android:src="@drawable/grass" />
+
+    <ImageView
+        android:id="@+id/face_left"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="95dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_face_left" />
+
+    <ImageView
+        android:id="@+id/face_right"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="95dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_face_right" />
+
 
 </RelativeLayout>

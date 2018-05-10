@@ -15,20 +15,31 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Получим ссылку на солнце
-        ImageView sunImageView = (ImageView) findViewById(R.id.sun);
-        // Анимация для восхода солнца
-        Animation sunRiseAnimation = AnimationUtils.loadAnimation(this, R.anim.sun_rise);
+        /**Анимация левого лица*/
+        // Получим ссылку на эмблему
+        ImageView sunImageView = (ImageView) findViewById(R.id.label);
+        // Анимация для эмблемы
+        Animation sunRiseAnimation = AnimationUtils.loadAnimation(this, R.anim.label_anim);
         // Подключаем анимацию к нужному View
         sunImageView.startAnimation(sunRiseAnimation);
 
-        // Задержка открытия WelcomeActivity
+        /**Анимация левого лица*/
+        ImageView faceLeftImageView = (ImageView) findViewById(R.id.face_left);
+        Animation faceLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.face_up_left);
+        faceLeftImageView.startAnimation(faceLeftAnimation);
+
+        /**Анимация правого лица*/
+        ImageView faceRightImageView = (ImageView) findViewById(R.id.face_right);
+        Animation faceRightAnimation = AnimationUtils.loadAnimation(this, R.anim.face_up_right);
+        faceRightImageView.startAnimation(faceRightAnimation);
+
+        /** Задержка открытия WelcomeActivity */
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(), WelcomeActivity.class));
             }
-        }, 6000);
+        }, 4000);
 
 
     }
