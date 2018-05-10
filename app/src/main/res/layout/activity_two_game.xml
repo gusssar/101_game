@@ -1,131 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TwoGameActivity">
 
     <LinearLayout
-        android:paddingTop="15dp"
-        android:layout_margin="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="101: игра для двоих"
-            android:textSize="20dp">
-        </TextView>
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_margin="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/TextNamePlayer1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
-        </TextView>
-
-        <EditText
-            android:id="@+id/score_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="numberSigned">
-        </EditText>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_margin="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/TextNamePlayer2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
-        </TextView>
-        <EditText
-            android:id="@+id/score_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="numberSigned">
-        </EditText>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:padding="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btnRun"
-            android:layout_weight="2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/count_score"
-            android:textSize="11dp">
-        </Button>
-        <Button
-            android:id="@+id/btnClear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/clear"
-            android:textSize="11dp">
-        </Button>
-    </LinearLayout>
-    <LinearLayout
+        android:id="@+id/head_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp">
-        <TextView
-            android:id="@+id/TextSumPlayer1"
-            android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:paddingTop="15dp"
+            android:layout_margin="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Сумма Маши"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
-        <TextView
-            android:layout_weight="1"
-            android:id="@+id/out_score_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp">
-        <TextView
-            android:id="@+id/TextSumPlayer2"
-            android:layout_weight="1"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="101: игра для двоих"
+                android:textSize="20dp">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/TextNamePlayer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+            </TextView>
+
+            <EditText
+                android:id="@+id/score_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="numberSigned">
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/TextNamePlayer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+            </TextView>
+            <EditText
+                android:id="@+id/score_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="numberSigned">
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnRun"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@color/colorBackground"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/count_score"
+                android:textSize="11dp">
+            </Button>
+            <Button
+                android:id="@+id/btnClear"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@color/colorBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/clear"
+                android:textSize="11dp">
+            </Button>
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Сумма Паши"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
-        <TextView
-            android:layout_weight="1"
-            android:id="@+id/out_score_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:orientation="vertical"
+            android:layout_below="@+id/head_block">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <TextView
+                    android:id="@+id/TextSumPlayer1"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Сумма Маши"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/out_score_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+                <TextView
+                    android:id="@+id/TextSumPlayer2"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Сумма Паши"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/out_score_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonPrice"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:onClick="GoToGameRules"
-        app:srcCompat="@android:drawable/ic_dialog_info" />
-</LinearLayout>
+        android:onClick="GoToGamePrice"
+        app:srcCompat="@android:drawable/ic_menu_help"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

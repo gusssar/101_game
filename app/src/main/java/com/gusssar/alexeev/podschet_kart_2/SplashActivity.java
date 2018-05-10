@@ -4,16 +4,18 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity__splash);
 
         /**Анимация левого лица*/
         // Получим ссылку на эмблему
@@ -41,6 +43,10 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, 4000);
 
+    }
 
+    public void EasterEgg(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), R.string.info, Toast.LENGTH_LONG);
+        toast.show();
     }
 }

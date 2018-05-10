@@ -37,6 +37,8 @@
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="95dp"
         android:layout_marginLeft="15dp"
+        android:clickable="true"
+        android:onClick="EasterEgg"
         android:src="@drawable/ic_face_left" />
 
     <ImageView

@@ -1,6 +1,8 @@
 package com.gusssar.alexeev.podschet_kart_2;
 
-import android.app.Activity;
+import android.app.Dialog;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class FiveGameActivity extends Activity implements OnClickListener {
+public class FiveGameActivity extends AppCompatActivity implements OnClickListener {
     Button btnRun, btnClear;
     TextView out_score_first, out_score_second, out_score_third, out_score_fourth, out_score_fifth;
     EditText scFirst, scSecond, scThird, scFourth, scFifth;
@@ -21,6 +23,8 @@ public class FiveGameActivity extends Activity implements OnClickListener {
     int SCORE_3 = 0;
     int SCORE_4 = 0;
     int SCORE_5 = 0;
+    //для диалога
+    final int DIALOG_PRICE = 1;
 
 
     @Override
@@ -481,4 +485,23 @@ public class FiveGameActivity extends Activity implements OnClickListener {
                     startActivity(intent);
                 }
 
-}}}}
+}}}
+
+    /**фрагмент для правил игры (количества очков)*/
+
+    public void GoToGamePrice (View v){
+        showDialog(DIALOG_PRICE);
+    }
+
+    protected Dialog onCreateDialog (int id){
+        if (id == DIALOG_PRICE) {
+            AlertDialog.Builder adb = new AlertDialog.Builder(this);
+            adb.setTitle(R.string.PriceTitle);
+            adb.setMessage(R.string.PriceList);
+            adb.setIcon(android.R.drawable.ic_menu_help);
+            return adb.create();
+        }
+        return super.onCreateDialog(id);
+    }
+
+}

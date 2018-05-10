@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ThreeGameActivity">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -87,6 +96,8 @@
 
         <Button
             android:id="@+id/btnRun"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
             android:layout_weight="2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,6 +106,8 @@
         </Button>
         <Button
             android:id="@+id/btnClear"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -157,3 +170,16 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButtonPrice"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="GoToGamePrice"
+        app:srcCompat="@android:drawable/ic_menu_help"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

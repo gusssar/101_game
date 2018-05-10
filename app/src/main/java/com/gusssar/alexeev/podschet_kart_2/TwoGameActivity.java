@@ -1,6 +1,6 @@
 package com.gusssar.alexeev.podschet_kart_2;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,14 +17,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TwoGameActivity extends Activity implements OnClickListener {
+//public class TwoGameActivity extends Activity implements OnClickListener {
+public class TwoGameActivity extends AppCompatActivity implements OnClickListener {
     Button btnRun, btnClear;
     TextView out_score_first, out_score_second;
     EditText scFirst, scSecond;
     int SCORE_1 = 0;
     int SCORE_2 = 0;
     //для диалога
-    final int DIALOG_INFO = 1;
+    final int DIALOG_PRICE = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -146,48 +147,17 @@ public class TwoGameActivity extends Activity implements OnClickListener {
 
 /**фрагмент для правил игры (количества очков)*/
 
-
-//    public void GoToGameRules(View view) {
-
-//        // вызываем диалог
-//        showDialog(DIALOG_EXIT);
-//    //    TwoGameActivity myDialogFragment = new TwoGameActivity();
-//    //    FragmentManager manager = getSupportFragmentManager();
-//    //    //myDialogFragment.show(manager, "dialog");
-////
-//    //    FragmentTransaction transaction = manager.beginTransaction();
-//    //    myDialogFragment.show(transaction, "dialog");
-//    }
-
-//}
-
-//public class MyDialogFragment extends DialogFragment {
-//
-//    public void onClick(View view) {
-//        FragmentManager manager = getSupportFragmentManager();
-//        MyDialogFragment myDialogFragment = new MyDialogFragment();
-//        myDialogFragment.show(manager, "dialog");
-//    }
-
-
-    public void GoToGameRules (View v){
-        showDialog(DIALOG_INFO);
+    public void GoToGamePrice (View v){
+        showDialog(DIALOG_PRICE);
     }
 
     protected Dialog onCreateDialog (int id){
-        if (id == DIALOG_INFO) {
+        if (id == DIALOG_PRICE) {
             AlertDialog.Builder adb = new AlertDialog.Builder(this);
-// заголовок
-           // adb.setTitle(R.string.exit);
-            adb.setTitle("Начисление очков");
-// сообщение
-            //adb.setMessage(R.string.save_data);
-            adb.setMessage("Очки начилсяются исходя из того-то сего-то");
-// иконка
-            adb.setIcon(android.R.drawable.ic_dialog_info);
-// кнопка нейтрального ответа
-// создаем диалог
-            return adb.create();
+                adb.setTitle(R.string.PriceTitle);
+                adb.setMessage(R.string.PriceList);
+                adb.setIcon(android.R.drawable.ic_menu_help);
+                return adb.create();
         }
         return super.onCreateDialog(id);
         }

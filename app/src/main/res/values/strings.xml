@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">101:Подсчёт карт</string>
-    <string name="ver">ver.0.1</string>
-    <string name="info">Программа разработанна Алексеевым Алексеем. Работа программы переделана под работу без БД</string>
+    <string name="ver">ver.0.2</string>
+    <string name="info">developed by Alexeev Alexey.</string>
 
     <string name="count_score">Подсчитать очки</string>
     <string name="clear">Новая игра</string>
