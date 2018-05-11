@@ -97,6 +97,8 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
         String player_name_3 = getIntent().getExtras().getString("player_name_3");//имя третьего игрока
         String player_name_4 = getIntent().getExtras().getString("player_name_4");//имя четвертого игрока
 
+        String TOAST_TO_ZERO= getResources().getString(R.string.TOAST_TO_ZERO);
+
         /** не нужно
         Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки первого игрока
         Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки второго игрока
@@ -142,28 +144,28 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
                         SCORE_1 = 0;
                         out_score_first.setText(Integer.toString(0));
                         scFirst.setText("");
-                        Toast toast = Toast.makeText(getApplicationContext(), player_name_1 + " обнуляет результат!", Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(getApplicationContext(), player_name_1 + " " + TOAST_TO_ZERO, Toast.LENGTH_LONG);
                         toast.show();
                     }
                     if (SCORE_2 == 101) {
                         SCORE_2 = 0;
                         out_score_second.setText(Integer.toString(0));
                         scSecond.setText("");
-                        Toast toast = Toast.makeText(getApplicationContext(), player_name_2 + " обнуляет результат!", Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(getApplicationContext(), player_name_2 + " " + TOAST_TO_ZERO, Toast.LENGTH_LONG);
                         toast.show();
                     }
                     if (SCORE_3 == 101) {
                         SCORE_3 = 0;
                         out_score_third.setText(Integer.toString(0));
                         scThird.setText("");
-                        Toast toast = Toast.makeText(getApplicationContext(), player_name_3 + " обнуляет результат!", Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(getApplicationContext(), player_name_3 + " " + TOAST_TO_ZERO, Toast.LENGTH_LONG);
                         toast.show();
                     }
                     if (SCORE_4 == 101) {
                         SCORE_4 = 0;
                         out_score_fourth.setText(Integer.toString(0));
                         scFourth.setText("");
-                        Toast toast = Toast.makeText(getApplicationContext(), player_name_4 + " обнуляет результат!", Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(getApplicationContext(), player_name_4 + " " + TOAST_TO_ZERO, Toast.LENGTH_LONG);
                         toast.show();
                     }
 

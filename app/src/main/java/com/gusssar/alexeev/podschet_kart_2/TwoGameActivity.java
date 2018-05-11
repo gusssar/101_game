@@ -73,6 +73,8 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
         String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
 
+        String TOAST_TO_ZERO= getResources().getString(R.string.TOAST_TO_ZERO);
+
         /**
          Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки из предыдущей игры первого игрока
          Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки из предыдущей игры второго игрока
@@ -83,7 +85,7 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
             case R.id.btnRun:
                 if (TextUtils.isEmpty(scFirst.getText().toString()) || TextUtils.isEmpty(scSecond.getText().toString())) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Заполните поля!", Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.TOAST_INPUT_FIELDS, Toast.LENGTH_LONG);
                     toast.show();
                     return;
                 } else {
@@ -103,14 +105,17 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
                         SCORE_1 = 0;
                         out_score_first.setText(Integer.toString(0));
                         scFirst.setText("");
-                        Toast toast = Toast.makeText(getApplicationContext(), player_name_1 + " обнуляет результат!", Toast.LENGTH_LONG);
+                        //Toast toast = Toast.makeText(getApplicationContext(), player_name_1 + " обнуляет результат!", Toast.LENGTH_LONG);
+
+                        //String pl_n_1= R.string.TOAST_TO_ZERO.getText().toString();
+                        Toast toast = Toast.makeText(getApplicationContext(), player_name_1 + " " + TOAST_TO_ZERO, Toast.LENGTH_LONG);
                         toast.show();
                     }
                     if (SCORE_2 == 101) {
                         SCORE_2 = 0;
                         out_score_second.setText(Integer.toString(0));
                         scSecond.setText("");
-                        Toast toast = Toast.makeText(getApplicationContext(), player_name_2 + " обнуляет результат!", Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(getApplicationContext(), player_name_2 + " " + TOAST_TO_ZERO, Toast.LENGTH_LONG);
                         toast.show();
                     }
 

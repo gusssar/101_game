@@ -17,8 +17,8 @@
         android:gravity="center"
         android:layout_margin="15dp"
         android:textSize="18dp"
-        android:textColor="#FA8072"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorTitle"
         android:text="@string/input_name"/>
 
     <LinearLayout
@@ -29,6 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
             android:textSize="18dp"
             android:text="@string/info_player_1"/>
         <EditText
@@ -37,7 +38,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName|textCapWords"
             android:maxLength="10"
-            android:hint="@string/player_1_name_hint"/>
+            android:hint="@string/player_name_hint"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,6 +48,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
             android:textSize="18dp"
             android:text="@string/info_player_2"/>
         <EditText
@@ -55,7 +57,7 @@
             android:layout_height="wrap_content"
             android:maxLength="10"
             android:inputType="textPersonName|textCapWords"
-            android:hint="@string/player_2_name_hint"/>
+            android:hint="@string/player_name_hint"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,6 +67,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
             android:textSize="18dp"
             android:text="@string/info_player_3"/>
         <EditText
@@ -73,7 +76,7 @@
             android:layout_height="wrap_content"
             android:maxLength="10"
             android:inputType="textPersonName|textCapWords"
-            android:hint="@string/player_3_name_hint"/>
+            android:hint="@string/player_name_hint"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,6 +86,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
             android:textSize="18dp"
             android:text="@string/info_player_4"/>
         <EditText
@@ -91,7 +95,7 @@
             android:layout_height="wrap_content"
             android:maxLength="10"
             android:inputType="textPersonName|textCapWords"
-            android:hint="@string/player_4_name_hint"/>
+            android:hint="@string/player_name_hint"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -101,6 +105,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
             android:textSize="18dp"
             android:text="@string/info_player_5"/>
         <EditText
@@ -109,7 +114,7 @@
             android:layout_height="wrap_content"
             android:maxLength="10"
             android:inputType="textPersonName|textCapWords"
-            android:hint="@string/player_5_name_hint"/>
+            android:hint="@string/player_name_hint"/>
     </LinearLayout>
 
     <Button

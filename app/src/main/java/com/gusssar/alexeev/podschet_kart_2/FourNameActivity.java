@@ -3,8 +3,10 @@ package com.gusssar.alexeev.podschet_kart_2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class FourNameActivity extends AppCompatActivity {
 
@@ -23,20 +25,28 @@ public class FourNameActivity extends AppCompatActivity {
 
         /**проба с помощью цикла и массива
 
-        int numb_of_player = 4;
-        for (int i=1; i < numb_of_player + 1; i++)
-        {
-            EditText EditPlayer[i] = (EditText) findViewById(R.id.EditPlayer[i]);
+         int numb_of_player = 4;
+         for (int i=1; i < numb_of_player + 1; i++)
+         {
+         EditText EditPlayer[i] = (EditText) findViewById(R.id.EditPlayer[i]);
+         }
+         */
+        if (TextUtils.isEmpty(EditPlayer1.getText().toString()) ||
+                TextUtils.isEmpty(EditPlayer2.getText().toString()) ||
+                TextUtils.isEmpty(EditPlayer3.getText().toString()) ||
+                TextUtils.isEmpty(EditPlayer4.getText().toString())) {
+            Toast toast = Toast.makeText(getApplicationContext(), "Заполните поля!", Toast.LENGTH_LONG);
+            toast.show();
+            return;
+        } else {
+            Intent intent = new Intent(this, FourGameActivity.class);
+
+            intent.putExtra("player_name_1", EditPlayer1.getText().toString());
+            intent.putExtra("player_name_2", EditPlayer2.getText().toString());
+            intent.putExtra("player_name_3", EditPlayer3.getText().toString());
+            intent.putExtra("player_name_4", EditPlayer4.getText().toString());
+            startActivity(intent);
         }
-        */
-
-        Intent intent = new Intent(this, FourGameActivity.class);
-
-        intent.putExtra("player_name_1",EditPlayer1.getText().toString());
-        intent.putExtra("player_name_2",EditPlayer2.getText().toString());
-        intent.putExtra("player_name_3",EditPlayer3.getText().toString());
-        intent.putExtra("player_name_4",EditPlayer4.getText().toString());
-        startActivity(intent);
     }
 
     public void GoToBegin(View view) {

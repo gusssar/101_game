@@ -13,7 +13,7 @@
         android:gravity="center"
         android:layout_margin="15dp"
         android:textSize="18dp"
-        android:textColor="#FA8072"
+        android:textColor="@color/colorTitle"
         android:layout_height="wrap_content"
         android:text="@string/input_name"/>
     <LinearLayout
@@ -24,6 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
             android:textSize="18dp"
             android:text="@string/info_player_1"/>
         <EditText
@@ -32,7 +33,7 @@
             android:maxLength="10"
             android:inputType="textPersonName|textCapWords"
             android:layout_height="wrap_content"
-            android:hint="@string/player_1_name_hint"/>
+            android:hint="@string/player_name_hint"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,6 +43,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
             android:textSize="18dp"
             android:text="@string/info_player_2"/>
         <EditText
@@ -50,7 +52,7 @@
             android:maxLength="10"
             android:inputType="textPersonName|textCapWords"
             android:layout_height="wrap_content"
-            android:hint="@string/player_2_name_hint"/>
+            android:hint="@string/player_name_hint"/>
     </LinearLayout>
     <Button
         android:layout_margin="15dp"

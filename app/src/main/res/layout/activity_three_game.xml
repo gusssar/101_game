@@ -23,7 +23,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="101: игра для троих"
+            android:textColor="@color/colorTitle"
+            android:text="@string/two_game_title"
             android:textSize="20dp">
         </TextView>
     </LinearLayout>
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/TextNamePlayer1"
+            android:textColor="@color/colorTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -56,6 +58,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/TextNamePlayer2"
+            android:textColor="@color/colorTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -75,6 +78,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/TextNamePlayer3"
+            android:textColor="@color/colorTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -121,6 +125,7 @@
         android:layout_margin="7dp">
         <TextView
             android:id="@+id/TextSumPlayer1"
+            android:textColor="@color/colorTitle"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -139,6 +144,7 @@
         android:layout_margin="7dp">
         <TextView
             android:id="@+id/TextSumPlayer2"
+            android:textColor="@color/colorTitle"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -157,6 +163,7 @@
         android:layout_margin="7dp">
         <TextView
             android:id="@+id/TextSumPlayer3"
+            android:textColor="@color/colorTitle"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">101:Count of cards</string>
+    <string name="ver">ver.0.2</string>
+    <string name="info">developed by Alexeev Alexey.</string>
+
+    <string name="count_score">Count the points</string>
+    <string name="clear">New game</string>
+
+    <string name="welcome_text">Welcome to the program scoring of the game 101! To start the game, select the number of participants:</string>
+    <string name="win_text">Congratilation!   Winner:</string>
+
+    <string name="two_player">Two\n players</string>
+    <string name="three_player">Three\n players</string>
+    <string name="four_player">Four\n players</string>
+    <string name="five_player">Five\n players</string>
+    <string name="game_rules">Game rules</string>
+
+    <string name="two_game_title">101: game for two</string>
+    <string name="three_game_title">101: game for three</string>
+    <string name="four_game_title">101: game for four</string>
+    <string name="five_game_title">101: game for five</string>
+
+    <string name="input_name">Enter names of players In fields bellow and click \"Continue\"</string>
+    <string name="info_player_1">1\'st player name</string>
+    <string name="info_player_2">2\'nd  player name</string>
+    <string name="info_player_3">3\'rd player name</string>
+    <string name="info_player_4">4\'th player name</string>
+    <string name="info_player_5">5\'th player name</string>
+
+    <string name="player_name_hint">Enter name</string>
+
+    <string name="Next">Continue</string>
+    <string name="Begin">To beginning</string>
+    <string name="GameRulesTitle">Game rules</string>
+    <string name="GameRulesFullList">
+        Play a deck of cards of 36 cards.\n
+4 cards are dealt for each player, and to dealer - 3 cards (the fourth card he puts at stake).\n
+The deck is placed in the middle of the table. \n
+In the first game, the first move is given to dealer, and then to the player
+        who won in the last game.\n
+The player after the handler needs to beat the card on the stake. In this game going clockwise.\n
+The next player can put on it a card of the same suit or the same dignity.\n
+If he does not have the required card, he can take only one card, and he can still use the card
+        from his arsenal - if it does not fit, the move goes to the next player.\n
+If the cards in the deck end, the top and remaining under the table top are removed from
+        the stack of open cards, the rest are turned over and again serve as a deck.\n\n
+Special cards require certain actions from the following player:\n\n
+6 - the player who was like should " to cover" it - put the card there, rule rules (if there are no
+        suitable ones, take from the deck until he finds the right one).\n
+7 - The next player must take 2 cards and skip the turn.\n
+8 - the next player must take 1 card and skip the turn.\n
+Ace - the next player misses the turn.\n
+Queen is a trump card. A player who has laid out Queen can order any suit.
+        The next player, in this case, can put the card only of the ordered suit or Queen
+        (and order any suit).\n
+King of Spades - The next player must take 4 cards and skip the turn.\n\n
+The goal of one game stake is to get rid of all the cards on hand.
+        The first player who gets rid of his cards wins.
+        The rest count the points on the cards left in their hands.\n\n
+Loses the one who collects more than 101 points.
+    </string>
+    <string name="GameRulesShortList">
+        Briefly:\n
+        6 - necessary "to cover" yourself.\n
+        7 - the next one takes 2 cards and skips.\
+        8 - the next one takes 1 card and skips.\n
+        Ace - the next misses.\n
+        The lady is a trump card.\n
+        King of spades - the next takes 4 cards and skips.</string>
+    <string name="PriceTitle">Points of cards</string>
+    <string name="PriceList">Points are calculated according to the value of the card:\n
+        Six - 6 points,\n
+        Seven - 7 points,\n
+        Eight - 8 points,\n
+        Nine - 9 points,\n
+        Ten - 10 points,\n
+        Jack - 2 points,\n
+        Queen - 3 points,\n
+        King - 4 points,\n
+        Ace - 11 points,\n\n
+        If there is only:\n
+        Queen of Spades - 40 points,\n
+        Queen (not Spades) - 20 points,\n\n
+        If the player puts the last:\n
+        Queen of Spades - -40 points,\n
+        Queen (not Spades) - -20 points.\n
+    </string>
+
+    <string name="TOAST_INPUT_FIELDS">Empty fields!</string>
+    <string name="TOAST_TO_ZERO"> resets result!</string>
+</resources>
