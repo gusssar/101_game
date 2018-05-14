@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ThreeGameActivity extends AppCompatActivity implements OnClickListener {
-    Button btnRun, btnClear;
+    Button btnRun;
     TextView out_score_first, out_score_second, out_score_third;
     EditText scFirst, scSecond, scThird;
     int SCORE_1 = 0;
@@ -32,8 +32,6 @@ public class ThreeGameActivity extends AppCompatActivity implements OnClickListe
 
         btnRun = (Button) findViewById(R.id.btnRun);
             btnRun.setOnClickListener(this);
-        btnClear = (Button) findViewById(R.id.btnClear);
-            btnClear.setOnClickListener(this);
         scFirst = (EditText) findViewById(R.id.score_first);
         scSecond = (EditText) findViewById(R.id.score_second);
         scThird = (EditText) findViewById(R.id.score_third);
@@ -45,6 +43,7 @@ public class ThreeGameActivity extends AppCompatActivity implements OnClickListe
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
         String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
         String player_name_3 = getIntent().getExtras().getString("player_name_3");//имя третьего игрока
+        String total= getResources().getString(R.string.total);
             TextView PlayerName1 = (TextView)findViewById(R.id.TextNamePlayer1);
             TextView PlayerName2 = (TextView)findViewById(R.id.TextNamePlayer2);
             TextView PlayerName3 = (TextView)findViewById(R.id.TextNamePlayer3);
@@ -54,9 +53,9 @@ public class ThreeGameActivity extends AppCompatActivity implements OnClickListe
                     PlayerName1.setText(player_name_1);
                     PlayerName2.setText(player_name_2);
                     PlayerName3.setText(player_name_3);
-                        PlayerSum1.setText("Итого " + player_name_1 +":");
-                        PlayerSum2.setText("Итого " + player_name_2 +":");
-                        PlayerSum3.setText("Итого " + player_name_3 +":");
+                        PlayerSum1.setText(total+" "+player_name_1+":");
+                        PlayerSum2.setText(total+" "+player_name_2+":");
+                        PlayerSum3.setText(total+" "+player_name_3+":");
         /**очки из предыдущей активности если есть*/
 
 
@@ -97,7 +96,7 @@ public class ThreeGameActivity extends AppCompatActivity implements OnClickListe
                 if (TextUtils.isEmpty(scFirst.getText().toString()) ||
                         TextUtils.isEmpty(scSecond.getText().toString()) ||
                             TextUtils.isEmpty(scThird.getText().toString())) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Заполните поля!", Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.TOAST_INPUT_FIELDS, Toast.LENGTH_LONG);
                     toast.show();
                     return;
                 } else {
@@ -216,5 +215,21 @@ public class ThreeGameActivity extends AppCompatActivity implements OnClickListe
             return adb.create();
         }
         return super.onCreateDialog(id);
+    }
+    public void GoToBegin(View view) {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+    }
+    //при ошибочном нажатии Back
+    private static long back_pressed;
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+            super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), R.string.DOUBLE_PRESS_BACK,
+                    Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
     }
 }

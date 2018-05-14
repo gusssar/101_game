@@ -17,14 +17,22 @@
             </intent-filter>
         </activity>
         <activity android:name=".WelcomeActivity"/>
-        <activity android:name=".TwoNameActivity" />
-        <activity android:name=".ThreeNameActivity" />
-        <activity android:name=".TwoGameActivity" />
-        <activity android:name=".ThreeGameActivity" />
-        <activity android:name=".FourNameActivity" />
-        <activity android:name=".FourGameActivity" />
-        <activity android:name=".FiveNameActivity" />
-        <activity android:name=".FiveGameActivity" />
+        <activity android:name=".TwoNameActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ThreeNameActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".TwoGameActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ThreeGameActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".FourNameActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".FourGameActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".FiveNameActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".FiveGameActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".WinActivity" />
 
     </application>

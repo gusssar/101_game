@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 //public class TwoGameActivity extends Activity implements OnClickListener {
 public class TwoGameActivity extends AppCompatActivity implements OnClickListener {
-    Button btnRun, btnClear;
+    Button btnRun;
     TextView out_score_first, out_score_second;
     EditText scFirst, scSecond;
     int SCORE_1 = 0;
@@ -34,8 +34,6 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
         btnRun = (Button) findViewById(R.id.btnRun);
         btnRun.setOnClickListener(this);
-        btnClear = (Button) findViewById(R.id.btnClear);
-        btnClear.setOnClickListener(this);
 
         scFirst = (EditText) findViewById(R.id.score_first);
         scSecond = (EditText) findViewById(R.id.score_second);
@@ -48,14 +46,16 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
         String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
 
+        String total= getResources().getString(R.string.total);
+
         TextView PlayerName1 = (TextView) findViewById(R.id.TextNamePlayer1);
         TextView PlayerName2 = (TextView) findViewById(R.id.TextNamePlayer2);
         TextView PlayerSum1 = (TextView) findViewById(R.id.TextSumPlayer1);
         TextView PlayerSum2 = (TextView) findViewById(R.id.TextSumPlayer2);
         PlayerName1.setText(player_name_1);
         PlayerName2.setText(player_name_2);
-        PlayerSum1.setText("Итого " + player_name_1 + ":");
-        PlayerSum2.setText("Итого " + player_name_2 + ":");
+        PlayerSum1.setText(total+" "+player_name_1+":");
+        PlayerSum2.setText(total+" "+player_name_2+":");
 
         Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки из предыдущей игры первого игрока
         Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки из предыдущей игры второго игрока
@@ -167,6 +167,22 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         return super.onCreateDialog(id);
         }
 
+    public void GoToBegin(View view) {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+    }
+    //при ошибочном нажатии Back
+    private static long back_pressed;
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+            super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), R.string.DOUBLE_PRESS_BACK,
+                    Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
+    }
     }
 
 

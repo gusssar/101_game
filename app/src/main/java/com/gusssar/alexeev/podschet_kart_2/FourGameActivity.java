@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class FourGameActivity extends AppCompatActivity implements OnClickListener {
-    Button btnRun, btnClear;
+    Button btnRun;
     TextView out_score_first, out_score_second, out_score_third, out_score_fourth;
     EditText scFirst, scSecond, scThird, scFourth;
     int SCORE_1 = 0;
@@ -32,8 +32,6 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
 
         btnRun = (Button) findViewById(R.id.btnRun);
             btnRun.setOnClickListener(this);
-        btnClear = (Button) findViewById(R.id.btnClear);
-            btnClear.setOnClickListener(this);
 
         scFirst = (EditText) findViewById(R.id.score_first);
         scSecond = (EditText) findViewById(R.id.score_second);
@@ -51,6 +49,8 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
         String player_name_3 = getIntent().getExtras().getString("player_name_3");//имя третьего игрока
         String player_name_4 = getIntent().getExtras().getString("player_name_4");//имя четвертого игрока
 
+        String total= getResources().getString(R.string.total);
+
         TextView PlayerName1 = (TextView)findViewById(R.id.TextNamePlayer1);
         TextView PlayerName2 = (TextView)findViewById(R.id.TextNamePlayer2);
         TextView PlayerName3 = (TextView)findViewById(R.id.TextNamePlayer3);
@@ -63,10 +63,10 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
                 PlayerName2.setText(player_name_2);
                 PlayerName3.setText(player_name_3);
                 PlayerName4.setText(player_name_4);
-                    PlayerSum1.setText("Итого " + player_name_1 +":");
-                    PlayerSum2.setText("Итого " + player_name_2 +":");
-                    PlayerSum3.setText("Итого " + player_name_3 +":");
-                    PlayerSum4.setText("Итого " + player_name_4 +":");
+                    PlayerSum1.setText(total+" "+player_name_1+":");
+                    PlayerSum2.setText(total+" "+player_name_2+":");
+                    PlayerSum3.setText(total+" "+player_name_3+":");
+                    PlayerSum4.setText(total+" "+player_name_4+":");
 
 
                     /**очки из предыдущей активности если есть*/
@@ -115,7 +115,7 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
                         TextUtils.isEmpty(scSecond.getText().toString()) ||
                             TextUtils.isEmpty(scThird.getText().toString()) ||
                                  TextUtils.isEmpty(scFourth.getText().toString())) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Заполните поля!", Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.TOAST_INPUT_FIELDS, Toast.LENGTH_LONG);
                     toast.show();
                     return;
                 } else {
@@ -321,5 +321,22 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
             return adb.create();
         }
         return super.onCreateDialog(id);
+    }
+
+    public void GoToBegin(View view) {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+    }
+    //при ошибочном нажатии Back
+    private static long back_pressed;
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+            super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), R.string.DOUBLE_PRESS_BACK,
+                    Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
     }
 }

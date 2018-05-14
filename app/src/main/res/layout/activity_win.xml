@@ -43,5 +43,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="88dp"
         android:onClick="GoToBegin"
-        android:text="Начать новую игру" />
+        android:text="@string/clear" />
 </RelativeLayout>

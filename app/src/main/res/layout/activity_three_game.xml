@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorTitle"
-            android:text="@string/two_game_title"
+            android:text="@string/three_game_title"
             android:textSize="20dp">
         </TextView>
     </LinearLayout>
@@ -116,6 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/clear"
+            android:onClick="GoToBegin"
             android:textSize="11dp">
         </Button>
     </LinearLayout>

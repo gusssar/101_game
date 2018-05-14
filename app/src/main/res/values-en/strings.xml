@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">101:Count of cards</string>
     <string name="ver">ver.0.2</string>
-    <string name="info">developed by Alexeev Alexey.</string>
 
     <string name="count_score">Count the points</string>
     <string name="clear">New game</string>
@@ -89,4 +88,9 @@ Loses the one who collects more than 101 points.
 
     <string name="TOAST_INPUT_FIELDS">Empty fields!</string>
     <string name="TOAST_TO_ZERO"> resets result!</string>
+    <string name="total">Total</string>
+    <string name="DOUBLE_PRESS_BACK">Press once again to exit</string>
+    <string name="WELCOME_EXIT">Exit: May be no?</string>
+    <string name="WELCOME_YES">I want exit, now!</string>
+    <string name="WELCOME_NO">Okay, let\'s play again</string>
 </resources>

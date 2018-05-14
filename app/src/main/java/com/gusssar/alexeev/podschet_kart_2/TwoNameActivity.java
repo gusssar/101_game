@@ -40,4 +40,17 @@ public class TwoNameActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }
+
+    //при ошибочном нажатии Back
+    private static long back_pressed;
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+            super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), R.string.DOUBLE_PRESS_BACK,
+                    Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
+    }
 }

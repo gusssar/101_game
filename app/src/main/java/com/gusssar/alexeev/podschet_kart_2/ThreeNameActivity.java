@@ -24,7 +24,7 @@ public class ThreeNameActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(EditPlayer1.getText().toString()) ||
                 TextUtils.isEmpty(EditPlayer2.getText().toString()) ||
                 TextUtils.isEmpty(EditPlayer3.getText().toString())) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Заполните поля!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getApplicationContext(), R.string.TOAST_INPUT_FIELDS, Toast.LENGTH_LONG);
             toast.show();
             return;
         } else {
@@ -41,6 +41,19 @@ public class ThreeNameActivity extends AppCompatActivity {
     public void GoToBegin(View view) {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
+    }
+
+    //при ошибочном нажатии Back
+    private static long back_pressed;
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+            super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), R.string.DOUBLE_PRESS_BACK,
+                    Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
     }
 
 }
