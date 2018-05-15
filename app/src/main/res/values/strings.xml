@@ -89,6 +89,7 @@
     <string name="WELCOME_EXIT">Выход: Может не надо?</string>
     <string name="WELCOME_YES">Надо, Федя, надо!</string>
     <string name="WELCOME_NO">Ладно, так и быть продолжим.</string>
+    <string name="calc_btn">\.\.\.</string>
 
 
 </resources>

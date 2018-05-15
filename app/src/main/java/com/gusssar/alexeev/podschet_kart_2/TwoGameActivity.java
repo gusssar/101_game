@@ -75,10 +75,8 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
         String TOAST_TO_ZERO= getResources().getString(R.string.TOAST_TO_ZERO);
 
-        /**
-         Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки из предыдущей игры первого игрока
-         Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки из предыдущей игры второго игрока
-         */
+         //Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки из предыдущей игры первого игрока
+         //Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки из предыдущей игры второго игрока
 
 
         switch (v.getId()) {
@@ -183,7 +181,37 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
                     Toast.LENGTH_SHORT).show();
         back_pressed = System.currentTimeMillis();
     }
+
+    public void GoToCalc1(View view) {
+        //входящая информация
+        String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
+        String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
+
+
+        //исходящая информация
+        Intent intent = new Intent(this, CalculActivity.class);
+        intent.putExtra("player_name_1", player_name_1);
+        intent.putExtra("player_name_2", player_name_2);
+        intent.putExtra("SCORE_1", SCORE_1);
+        intent.putExtra("SCORE_2", SCORE_2);
+        startActivity(intent);
     }
+    public void GoToCalc2(View view) {
+
+        //входящая информация
+        String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
+        String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
+
+        //исходящая информация
+        Intent intent = new Intent(this, CalculActivity.class);
+        intent.putExtra("player_name_1", player_name_1);
+        intent.putExtra("player_name_2", player_name_2);
+        intent.putExtra("SCORE_1", SCORE_1);
+        intent.putExtra("SCORE_2", SCORE_2);
+        startActivity(intent);
+    }
+
+}
 
 
 
