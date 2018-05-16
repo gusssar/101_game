@@ -20,6 +20,9 @@ public class CalculActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calcul);
 
         mView = (TextView) findViewById(R.id.debug_edit);
+
+        String SCORE_1 = getIntent().getExtras().getString("snd_score_1");//очки из предыдущей игры первого игрока
+        Integer SCORE_2 = getIntent().getExtras().getInt("snd_score_2");
     }
 
     public void ShowRes (View view) {
@@ -62,8 +65,8 @@ public class CalculActivity extends AppCompatActivity {
     public void GoBack(View view) {
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
         String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
-        Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки из предыдущей игры первого игрока
-        Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки из предыдущей игры второго игрока
+        Integer SCORE_1 = getIntent().getExtras().getInt("snd_score_1");//очки из предыдущей игры первого игрока
+        Integer SCORE_2 = getIntent().getExtras().getInt("snd_score_2");//очки из предыдущей игры второго игрока
 
         Intent intent = new Intent(this, TwoGameActivity.class);
         intent.putExtra("player_name_1", player_name_1);

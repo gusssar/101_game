@@ -184,16 +184,24 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
     public void GoToCalc1(View view) {
         //входящая информация
+
+        //забираем информацию об очках из TextView
+        Integer snd_score_1  = Integer.parseInt(out_score_first.getText().toString());
+        Integer snd_score_2 = Integer.parseInt(out_score_second.getText().toString());
+
+        //забираем имена игроков
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
         String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
 
 
         //исходящая информация
         Intent intent = new Intent(this, CalculActivity.class);
+        //отсылаем имена
         intent.putExtra("player_name_1", player_name_1);
         intent.putExtra("player_name_2", player_name_2);
-        intent.putExtra("SCORE_1", SCORE_1);
-        intent.putExtra("SCORE_2", SCORE_2);
+        //отсылаем очки
+        intent.putExtra("snd_score_1", snd_score_1);
+        intent.putExtra("snd_score_2", snd_score_2);
         startActivity(intent);
     }
     public void GoToCalc2(View view) {
