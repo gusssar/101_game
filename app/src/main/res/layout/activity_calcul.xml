@@ -10,26 +10,138 @@
         android:onClick="ShowRes"
         android:text="Подсчитать"/>
 
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_below="@id/btn_res"
+        android:layout_above="@id/debug_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/last_move_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="23dp"
+            android:text="Если вы закончили одной из карт"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_q_last"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/last_move_title"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <RadioButton
+                android:id="@+id/radio_q_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="-"
+                android:textSize="23dp"
+                android:layout_weight="3"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radio_q_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Дама"
+                android:textSize="23dp"
+                android:layout_weight="2"/>
+            <RadioButton
+                android:id="@+id/radio_q_40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Дама Пик"
+                android:textSize="23dp"
+                android:layout_weight="2" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/last_hand_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rad_group_q_last"
+            android:textSize="23dp"
+            android:text="Если у вас осталась одна из карт"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_q_hand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/last_hand_title"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <RadioButton
+                android:id="@+id/radio_q_h_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="-"
+                android:textSize="23dp"
+                android:layout_weight="3"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radio_q_h_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Дама"
+                android:textSize="23dp"
+                android:layout_weight="2"/>
+            <RadioButton
+                android:id="@+id/radio_q_h_40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Дама Пик"
+                android:textSize="23dp"
+                android:layout_weight="2" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/hand_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rad_group_q_hand"
+            android:textSize="15dp"
+            android:text="Если у вас осталась больше одной карты на руке"/>
+
     <RelativeLayout
         android:id="@+id/lay_1"
-        android:layout_below="@id/btn_res"
+        android:layout_below="@+id/hand_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/six_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="6-ки"/>
 
         <RadioGroup
             android:id="@+id/rad_group_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/six_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:textSize="23dp"
-                android:text="6-ки"/>
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
 
             <RadioButton
                 android:id="@+id/radio_1_0"
@@ -83,19 +195,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp">
 
+        <TextView
+            android:id="@+id/seven_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="7-ки"/>
+
         <RadioGroup
             android:id="@+id/rad_group_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/seven_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:textSize="23dp"
-                android:text="7-ки"/>
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
 
             <RadioButton
                 android:id="@+id/radio_2_0"
@@ -149,19 +262,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp">
 
+        <TextView
+            android:id="@+id/eight_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="8-ки"/>
+
         <RadioGroup
             android:id="@+id/rad_group_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/eight_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:textSize="23dp"
-                android:text="8-ки"/>
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
 
             <RadioButton
                 android:id="@+id/radio_3_0"
@@ -206,24 +320,434 @@
                 android:layout_weight="1" />
 
         </RadioGroup>
-
-
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/lay_4"
+        android:layout_below="@id/lay_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/nine_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="9-ки"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <RadioButton
+                android:id="@+id/radio_4_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="23dp"
+                android:layout_weight="1"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radio_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_4_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_4_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_5"
+        android:layout_below="@id/lay_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/ten_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="10-ки"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <RadioButton
+                android:id="@+id/radio_5_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="23dp"
+                android:layout_weight="1"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radio_5_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_5_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_5_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_6"
+        android:layout_below="@id/lay_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/jack_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="Валеты"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <RadioButton
+                android:id="@+id/radio_6_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="23dp"
+                android:layout_weight="1"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radio_6_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_6_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_6_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_6_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_7"
+        android:layout_below="@id/lay_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/queen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="Дамы"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <RadioButton
+                android:id="@+id/radio_7_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="23dp"
+                android:layout_weight="1"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radio_7_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_7_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_7_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_7_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_8"
+        android:layout_below="@id/lay_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/king_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="Короли"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+
+            <RadioButton
+                android:id="@+id/radio_8_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="23dp"
+                android:layout_weight="1"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radio_8_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_8_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_8_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_8_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_9"
+        android:layout_below="@id/lay_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/ace_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="23dp"
+            android:text="Тузы"/>
+
+        <RadioGroup
+            android:id="@+id/rad_group_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <RadioButton
+                android:id="@+id/radio_9_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="23dp"
+                android:layout_weight="1"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/radio_9_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_9_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_9_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="3"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:id="@+id/radio_9_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="4"
+                android:textSize="23dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    </RelativeLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/debug_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lay_3"
+        android:layout_above="@id/btn_done"
         android:textSize="20dp"
-        android:text="Итого"/>
+        android:text="Итого: "/>
+    <TextView
+        android:id="@+id/debug_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_done"
+        android:layout_toRightOf="@id/debug_edit"
+        android:textSize="20dp"
+        android:text="0"/>
 
     <Button
         android:id="@+id/btn_done"
-        android:layout_below="@id/debug_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:onClick="GoBack"
         android:text="Записать"/>
 

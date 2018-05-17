@@ -59,9 +59,14 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
         Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки из предыдущей игры первого игрока
         Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки из предыдущей игры второго игрока
+        Integer TOTAL_1 = getIntent().getExtras().getInt("TOTAL_1");//очки из калькулятора для первого игрока
+        Integer TOTAL_2 = getIntent().getExtras().getInt("TOTAL_2");//очки из калькулятора для второго игрока
+
 
         out_score_first.setText(Integer.toString(SCORE_1));
         out_score_second.setText(Integer.toString(SCORE_2));
+        scFirst.setText(Integer.toString(TOTAL_1));
+        scSecond.setText(Integer.toString(TOTAL_2));
     }
 
     @Override
@@ -186,8 +191,12 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         //входящая информация
 
         //забираем информацию об очках из TextView
-        Integer snd_score_1  = Integer.parseInt(out_score_first.getText().toString());
-        Integer snd_score_2 = Integer.parseInt(out_score_second.getText().toString());
+        Integer SCORE_1  = Integer.parseInt(out_score_first.getText().toString());
+        Integer SCORE_2 = Integer.parseInt(out_score_second.getText().toString());
+
+        //забираем информацию об очках из EditText
+        Integer snd_ed_score_1  = Integer.parseInt(scFirst.getText().toString());
+        Integer snd_ed_score_2 = Integer.parseInt(scSecond.getText().toString());
 
         //забираем имена игроков
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
@@ -200,22 +209,48 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         intent.putExtra("player_name_1", player_name_1);
         intent.putExtra("player_name_2", player_name_2);
         //отсылаем очки
-        intent.putExtra("snd_score_1", snd_score_1);
-        intent.putExtra("snd_score_2", snd_score_2);
+        intent.putExtra("SCORE_1", SCORE_1);
+        intent.putExtra("SCORE_2", SCORE_2);
+
+        //отсылаем посчитанные очки
+        intent.putExtra("snd_ed_score_1", snd_ed_score_1);
+        intent.putExtra("snd_ed_score_2", snd_ed_score_2);
+
+        //отсылаем флаг Edit
+        intent.putExtra("FLAG_EDIT", 1);
         startActivity(intent);
     }
     public void GoToCalc2(View view) {
 
         //входящая информация
+
+        //забираем информацию об очках из TextView
+        Integer SCORE_1  = Integer.parseInt(out_score_first.getText().toString());
+        Integer SCORE_2 = Integer.parseInt(out_score_second.getText().toString());
+
+        //забираем информацию об очках из EditText
+        Integer snd_ed_score_1  = Integer.parseInt(scFirst.getText().toString());
+        Integer snd_ed_score_2 = Integer.parseInt(scSecond.getText().toString());
+
+        //забираем имена игроков
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
         String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
 
         //исходящая информация
         Intent intent = new Intent(this, CalculActivity.class);
+        //отсылаем имена
         intent.putExtra("player_name_1", player_name_1);
         intent.putExtra("player_name_2", player_name_2);
+        //отсылаем очки
         intent.putExtra("SCORE_1", SCORE_1);
         intent.putExtra("SCORE_2", SCORE_2);
+
+        //отсылаем посчитанные очки
+        intent.putExtra("snd_ed_score_1", snd_ed_score_1);
+        intent.putExtra("snd_ed_score_2", snd_ed_score_2);
+
+        //отсылаем флаг Edit
+        intent.putExtra("FLAG_EDIT", 2);
         startActivity(intent);
     }
 
