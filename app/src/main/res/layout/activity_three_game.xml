@@ -50,6 +50,16 @@
             android:inputType="numberSigned">
 
         </EditText>
+        <Button
+            android:id="@+id/btn_calc_1"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calc_btn"
+            android:onClick="GoToCalc1"
+            android:textSize="11dp">
+        </Button>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -71,6 +81,16 @@
             android:layout_weight="1"
             android:inputType="numberSigned">
         </EditText>
+        <Button
+            android:id="@+id/btn_calc_2"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calc_btn"
+            android:onClick="GoToCalc2"
+            android:textSize="11dp">
+        </Button>
     </LinearLayout>
     <LinearLayout
         android:layout_margin="7dp"
@@ -91,6 +111,16 @@
             android:layout_weight="1"
             android:inputType="numberSigned">
         </EditText>
+        <Button
+            android:id="@+id/btn_calc_3"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/colorBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calc_btn"
+            android:onClick="GoToCalc3"
+            android:textSize="11dp">
+        </Button>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout2"

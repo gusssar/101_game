@@ -149,36 +149,143 @@ public class CalculActivity extends AppCompatActivity {
         mView.setText(Integer.toString(total));
     }
 
-    Integer TOTAL_1, TOTAL_2;
+    Integer TOTAL_1, TOTAL_2, TOTAL_3, TOTAL_4, TOTAL_5;
 
     public void GoBack(View view) {
+        /**Глобальный приём со всех активностей*/
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
         String player_name_2 = getIntent().getExtras().getString("player_name_2");//имя второго игрока
+        String player_name_3 = getIntent().getExtras().getString("player_name_3");//имя второго игрока
+        String player_name_4 = getIntent().getExtras().getString("player_name_4");//имя второго игрока
+        String player_name_5 = getIntent().getExtras().getString("player_name_5");//имя второго игрока
+
         Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки из предыдущей игры первого игрока
         Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки из предыдущей игры второго игрока
-        Integer SCORE_ED_1 = getIntent().getExtras().getInt("snd_ed_score_1");//посчитанные очки из предыдущей игры первого игрока
-        Integer SCORE_ED_2 = getIntent().getExtras().getInt("snd_ed_score_2");//посчитанные очки из предыдущей игры второго игрока
-        Integer FLAG_EDIT =getIntent().getExtras().getInt("FLAG_EDIT");
+        Integer SCORE_3 = getIntent().getExtras().getInt("SCORE_3");//очки из предыдущей игры третьего игрока
+        Integer SCORE_4 = getIntent().getExtras().getInt("SCORE_4");//очки из предыдущей игры четвертого игрока
+        Integer SCORE_5 = getIntent().getExtras().getInt("SCORE_5");//очки из предыдущей игры пятого игрока
+
+        Integer SCORE_ED_1 = getIntent().getExtras().getInt("snd_ed_score_1");//посчитанные очки из предыдущей игры
+        Integer SCORE_ED_2 = getIntent().getExtras().getInt("snd_ed_score_2");//посчитанные очки из предыдущей игры
+        Integer SCORE_ED_3 = getIntent().getExtras().getInt("snd_ed_score_3");//посчитанные очки из предыдущей игры
+        Integer SCORE_ED_4 = getIntent().getExtras().getInt("snd_ed_score_4");//посчитанные очки из предыдущей игры
+        Integer SCORE_ED_5 = getIntent().getExtras().getInt("snd_ed_score_5");//посчитанные очки из предыдущей игры
+
+        Integer FLAG_EDIT =getIntent().getExtras().getInt("FLAG_EDIT");//флаг строки EDIT
+        Integer FLAG_ACTIVITY =getIntent().getExtras().getInt("FLAG_ACTIVITY");//флаг Активности
 
         Integer TOTAL = Integer.parseInt(mView.getText().toString());//забираем посчитанные очки
+
+        /**В зависимост от флага строки присваиваем значение*/
         if (FLAG_EDIT==1){
             TOTAL_1 = TOTAL;
             TOTAL_2 = SCORE_ED_2;
-            //return;
+            TOTAL_3 = SCORE_ED_3;
+            TOTAL_4 = SCORE_ED_4;
+            TOTAL_5 = SCORE_ED_5;
         }
         if (FLAG_EDIT==2){
             TOTAL_1 = SCORE_ED_1;
             TOTAL_2 = TOTAL;
+            TOTAL_3 = SCORE_ED_3;
+            TOTAL_4 = SCORE_ED_4;
+            TOTAL_5 = SCORE_ED_5;
+        }
+        if (FLAG_EDIT==3){
+            TOTAL_1 = SCORE_ED_1;
+            TOTAL_2 = SCORE_ED_2;
+            TOTAL_3 = TOTAL;
+            TOTAL_4 = SCORE_ED_4;
+            TOTAL_5 = SCORE_ED_5;
+        }
+        if (FLAG_EDIT==4){
+            TOTAL_1 = SCORE_ED_1;
+            TOTAL_2 = SCORE_ED_2;
+            TOTAL_3 = SCORE_ED_3;
+            TOTAL_4 = TOTAL;
+            TOTAL_5 = SCORE_ED_5;
+        }
+        if (FLAG_EDIT==5){
+            TOTAL_1 = SCORE_ED_1;
+            TOTAL_2 = SCORE_ED_2;
+            TOTAL_3 = SCORE_ED_3;
+            TOTAL_4 = TOTAL;
+            TOTAL_5 = SCORE_ED_5;
         }
 
-        /**Высылаем обратно*/
-        Intent intent = new Intent(this, TwoGameActivity.class);
-        intent.putExtra("player_name_1", player_name_1);
-        intent.putExtra("player_name_2", player_name_2);
-        intent.putExtra("SCORE_1", SCORE_1);
-        intent.putExtra("SCORE_2", SCORE_2);
-        intent.putExtra("TOTAL_1", TOTAL_1);//передача посчитанных очков первого игрока
-        intent.putExtra("TOTAL_2", TOTAL_2);//передача посчитанных очков второго игрока
-        startActivity(intent);
-    }
+        /**В зависимости от флага активности*/
+        if (FLAG_ACTIVITY==2){
+            /**Высылаем обратно*/
+            Intent intent = new Intent(this, TwoGameActivity.class);
+            intent.putExtra("player_name_1", player_name_1);
+            intent.putExtra("player_name_2", player_name_2);
+            intent.putExtra("SCORE_1", SCORE_1);
+            intent.putExtra("SCORE_2", SCORE_2);
+            intent.putExtra("TOTAL_1", TOTAL_1);//передача посчитанных очков первого игрока
+            intent.putExtra("TOTAL_2", TOTAL_2);//передача посчитанных очков второго игрока
+            startActivity(intent);
+        }
+        if (FLAG_ACTIVITY==3){
+            /**Высылаем обратно*/
+            Intent intent = new Intent(this, ThreeGameActivity.class);
+            intent.putExtra("player_name_1", player_name_1);
+            intent.putExtra("player_name_2", player_name_2);
+            intent.putExtra("player_name_3", player_name_3);
+
+            intent.putExtra("SCORE_1", SCORE_1);
+            intent.putExtra("SCORE_2", SCORE_2);
+            intent.putExtra("SCORE_3", SCORE_3);
+
+            intent.putExtra("TOTAL_1", TOTAL_1);//передача посчитанных очков
+            intent.putExtra("TOTAL_2", TOTAL_2);//передача посчитанных очков
+            intent.putExtra("TOTAL_3", TOTAL_3);//передача посчитанных очков
+
+            startActivity(intent);
+        }
+        if (FLAG_ACTIVITY==4){
+            /**Высылаем обратно*/
+            Intent intent = new Intent(this, FourGameActivity.class);
+            intent.putExtra("player_name_1", player_name_1);
+            intent.putExtra("player_name_2", player_name_2);
+            intent.putExtra("player_name_3", player_name_3);
+            intent.putExtra("player_name_4", player_name_4);
+
+            intent.putExtra("SCORE_1", SCORE_1);
+            intent.putExtra("SCORE_2", SCORE_2);
+            intent.putExtra("SCORE_3", SCORE_3);
+            intent.putExtra("SCORE_4", SCORE_4);
+
+            intent.putExtra("TOTAL_1", TOTAL_1);//передача посчитанных очков
+            intent.putExtra("TOTAL_2", TOTAL_2);//передача посчитанных очков
+            intent.putExtra("TOTAL_3", TOTAL_3);//передача посчитанных очков
+            intent.putExtra("TOTAL_4", TOTAL_4);//передача посчитанных очков
+
+            startActivity(intent);
+        }
+        if (FLAG_ACTIVITY==5){
+            /**Высылаем обратно*/
+            Intent intent = new Intent(this, FiveGameActivity.class);
+            intent.putExtra("player_name_1", player_name_1);
+            intent.putExtra("player_name_2", player_name_2);
+            intent.putExtra("player_name_3", player_name_3);
+            intent.putExtra("player_name_4", player_name_4);
+            intent.putExtra("player_name_5", player_name_5);
+
+            intent.putExtra("SCORE_1", SCORE_1);
+            intent.putExtra("SCORE_2", SCORE_2);
+            intent.putExtra("SCORE_3", SCORE_3);
+            intent.putExtra("SCORE_4", SCORE_4);
+            intent.putExtra("SCORE_5", SCORE_5);
+
+            intent.putExtra("TOTAL_1", TOTAL_1);//передача посчитанных очков
+            intent.putExtra("TOTAL_2", TOTAL_2);//передача посчитанных очков
+            intent.putExtra("TOTAL_3", TOTAL_3);//передача посчитанных очков
+            intent.putExtra("TOTAL_4", TOTAL_4);//передача посчитанных очков
+            intent.putExtra("TOTAL_5", TOTAL_5);//передача посчитанных очков
+
+            startActivity(intent);
+        }
+
+        }
+
 }

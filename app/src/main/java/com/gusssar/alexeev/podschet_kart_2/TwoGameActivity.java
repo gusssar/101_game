@@ -2,12 +2,8 @@ package com.gusssar.alexeev.podschet_kart_2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//public class TwoGameActivity extends Activity implements OnClickListener {
 public class TwoGameActivity extends AppCompatActivity implements OnClickListener {
     Button btnRun;
     TextView out_score_first, out_score_second;
@@ -50,10 +45,13 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
         TextView PlayerName1 = (TextView) findViewById(R.id.TextNamePlayer1);
         TextView PlayerName2 = (TextView) findViewById(R.id.TextNamePlayer2);
+
         TextView PlayerSum1 = (TextView) findViewById(R.id.TextSumPlayer1);
         TextView PlayerSum2 = (TextView) findViewById(R.id.TextSumPlayer2);
+
         PlayerName1.setText(player_name_1);
         PlayerName2.setText(player_name_2);
+
         PlayerSum1.setText(total+" "+player_name_1+":");
         PlayerSum2.setText(total+" "+player_name_2+":");
 
@@ -65,6 +63,7 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
         out_score_first.setText(Integer.toString(SCORE_1));
         out_score_second.setText(Integer.toString(SCORE_2));
+
         scFirst.setText(Integer.toString(TOTAL_1));
         scSecond.setText(Integer.toString(TOTAL_2));
     }
@@ -187,6 +186,9 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         back_pressed = System.currentTimeMillis();
     }
 
+    Integer snd_ed_score_1;
+    Integer snd_ed_score_2;
+
     public void GoToCalc1(View view) {
         //входящая информация
 
@@ -194,9 +196,14 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         Integer SCORE_1  = Integer.parseInt(out_score_first.getText().toString());
         Integer SCORE_2 = Integer.parseInt(out_score_second.getText().toString());
 
-        //забираем информацию об очках из EditText
-        Integer snd_ed_score_1  = Integer.parseInt(scFirst.getText().toString());
-        Integer snd_ed_score_2 = Integer.parseInt(scSecond.getText().toString());
+        //забираем информацию об очках из EditText с условием о незаполненных полях
+        if (TextUtils.isEmpty(scFirst.getText().toString())) {
+            snd_ed_score_1 = 0;}
+        else {
+            snd_ed_score_1  = Integer.parseInt(scFirst.getText().toString());}
+        if (TextUtils.isEmpty(scSecond.getText().toString())) {
+            snd_ed_score_2 = 0;}
+         else {snd_ed_score_2  = Integer.parseInt(scSecond.getText().toString());}
 
         //забираем имена игроков
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
@@ -218,6 +225,8 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
         //отсылаем флаг Edit
         intent.putExtra("FLAG_EDIT", 1);
+        //отсылаем флаг Активности
+        intent.putExtra("FLAG_ACTIVITY", 2);
         startActivity(intent);
     }
     public void GoToCalc2(View view) {
@@ -228,9 +237,14 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
         Integer SCORE_1  = Integer.parseInt(out_score_first.getText().toString());
         Integer SCORE_2 = Integer.parseInt(out_score_second.getText().toString());
 
-        //забираем информацию об очках из EditText
-        Integer snd_ed_score_1  = Integer.parseInt(scFirst.getText().toString());
-        Integer snd_ed_score_2 = Integer.parseInt(scSecond.getText().toString());
+        //забираем информацию об очках из EditText с условием о незаполненных полях
+        if (TextUtils.isEmpty(scFirst.getText().toString())) {
+            snd_ed_score_1 = 0;}
+        else {
+            snd_ed_score_1  = Integer.parseInt(scFirst.getText().toString());}
+        if (TextUtils.isEmpty(scSecond.getText().toString())) {
+            snd_ed_score_2 = 0;}
+        else {snd_ed_score_2  = Integer.parseInt(scSecond.getText().toString());}
 
         //забираем имена игроков
         String player_name_1 = getIntent().getExtras().getString("player_name_1");//имя первого игрока
@@ -251,6 +265,8 @@ public class TwoGameActivity extends AppCompatActivity implements OnClickListene
 
         //отсылаем флаг Edit
         intent.putExtra("FLAG_EDIT", 2);
+        //отсылаем флаг Активности
+        intent.putExtra("FLAG_ACTIVITY", 2);
         startActivity(intent);
     }
 
