@@ -13,8 +13,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:layout_margin="15dp"
-    android:textSize="18dp"
-    android:textColor="@color/colorTitle"
+    android:theme="@style/Text_Alex"
     android:layout_height="wrap_content"
     android:text="@string/welcome_text"/>
 
@@ -23,6 +22,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@id/Title"
+    android:layout_above="@id/ButtonToolBarWelcome"
     android:layout_centerHorizontal="true"
     android:orientation="vertical">
     <LinearLayout
@@ -30,22 +30,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp">
         <Button
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:textColor="@color/colorBackground"
+            android:theme="@style/Button_Alex"
             android:id="@+id/StartGameTwo"
             android:layout_marginRight="20dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/two_player"
             android:layout_weight="1"
             android:onClick="GoToGameTwo"
             />
         <Button
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:textColor="@color/colorBackground"
+            android:theme="@style/Button_Alex"
             android:id="@+id/StartGameThree"
             android:layout_marginLeft="20dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/three_player"
             android:layout_weight="1"
@@ -57,22 +55,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp">
         <Button
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:textColor="@color/colorBackground"
+            android:theme="@style/Button_Alex"
             android:id="@+id/StartGameFour"
             android:layout_marginRight="20dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/four_player"
             android:layout_weight="1"
             android:onClick="GoToGameFour"
             />
         <Button
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:textColor="@color/colorBackground"
+            android:theme="@style/Button_Alex"
             android:id="@+id/StartGameFive"
             android:layout_marginLeft="20dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/five_player"
             android:layout_weight="1"
@@ -85,34 +81,34 @@
 
 
         <LinearLayout
+        android:id="@+id/ButtonToolBarWelcome"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <Button
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:textColor="@color/colorBackground"
+            android:theme="@style/Button_Alex"
             android:id="@+id/GameInfo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:onClick="Info"
             android:text="@string/game_rules"
             />
 
         <ImageButton
-            android:backgroundTint="@color/colorPrimaryDark"
+            android:theme="@style/Button_Alex"
             android:id="@+id/imageButtonRules"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:layout_gravity="end"
             android:onClick="Info"
             app:srcCompat="@android:drawable/ic_menu_info_details" />
 
         <ImageButton
-            android:backgroundTint="@color/colorPrimaryDark"
+            android:theme="@style/Button_Alex"
             android:id="@+id/imageButtonPrice"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:onClick="Info"
             app:srcCompat="@android:drawable/ic_menu_help" />
 

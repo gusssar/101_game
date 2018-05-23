@@ -146,19 +146,19 @@ public class FiveGameActivity extends AppCompatActivity implements OnClickListen
 
 
                     /**Вычисление очков партии*/
-                    SCORE_1 = SCORE_1 + Integer.parseInt(sc_first);
+                    SCORE_1 = Integer.parseInt(out_score_first.getText().toString()) + Integer.parseInt(sc_first);
                     out_score_first.setText(Integer.toString(SCORE_1)); //выхлоп суммарного значения
                     scFirst.setText(""); //очистка Edit
-                    SCORE_2 = SCORE_2 + Integer.parseInt(sc_second);
+                    SCORE_2 = Integer.parseInt(out_score_second.getText().toString()) + Integer.parseInt(sc_second);
                     out_score_second.setText(Integer.toString(SCORE_2)); //выхлоп суммарного значен
                     scSecond.setText("");
-                    SCORE_3 = SCORE_3 + Integer.parseInt(sc_third);
+                    SCORE_3 = Integer.parseInt(out_score_third.getText().toString()) + Integer.parseInt(sc_third);
                     out_score_third.setText(Integer.toString(SCORE_3)); //выхлоп суммарного значения
                     scThird.setText("");
-                    SCORE_4 = SCORE_4 + Integer.parseInt(sc_fourth);
+                    SCORE_4 = Integer.parseInt(out_score_fourth.getText().toString()) + Integer.parseInt(sc_fourth);
                     out_score_fourth.setText(Integer.toString(SCORE_4)); //выхлоп суммарного значен
                     scFourth.setText("");
-                    SCORE_5 = SCORE_5 + Integer.parseInt(sc_fifth);
+                    SCORE_5 = Integer.parseInt(out_score_fifth.getText().toString()) + Integer.parseInt(sc_fifth);
                     out_score_fifth.setText(Integer.toString(SCORE_5)); //выхлоп суммарного значения
                     scFifth.setText("");
 

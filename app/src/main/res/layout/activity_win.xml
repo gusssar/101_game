@@ -7,41 +7,70 @@
 
 
     <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="85dp"
-        android:textColor="#cc6232"
-        android:textSize="25dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/win_text" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/cloud_win" />
-
-    <TextView
         android:id="@+id/name_win"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="TextView"
-        android:textColor="#3a6612"
+        android:text="ШМШМШМШМШМ"
+        android:paddingBottom="25dp"
+        android:textColor="@color/colorRedWinner"
         android:textSize="30dp" />
 
     <Button
         android:id="@+id/button"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@color/colorBackground"
+        android:theme="@style/Button_Alex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="88dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="78dp"
         android:onClick="GoToBegin"
         android:text="@string/clear" />
+<!--
+    <ImageView
+        android:id="@+id/title_full"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/win_title_full"
+        android:padding="20dp"
+        />
+        -->
+    <ImageView
+        android:id="@+id/title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/win_title_1"
+        android:padding="20dp"
+        />
+    <ImageView
+        android:id="@+id/title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/win_title_2"
+        android:padding="20dp"
+        />
+    <ImageView
+        android:id="@+id/title_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/win_title_3"
+        android:padding="20dp"
+        />
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="352dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="230dp"
+        android:src="@drawable/winner_man" />
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="352dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="230dp"
+        android:src="@drawable/shine_full" />
+
 </RelativeLayout>

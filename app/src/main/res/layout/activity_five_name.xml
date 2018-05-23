@@ -16,9 +16,8 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_margin="15dp"
-        android:textSize="18dp"
+        android:theme="@style/Text_Alex"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorTitle"
         android:text="@string/input_name"/>
 
     <LinearLayout
@@ -29,8 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTitle"
-            android:textSize="18dp"
+            android:theme="@style/Text_Alex"
             android:text="@string/info_player_1"/>
         <EditText
             android:id="@+id/EditPlayer1"
@@ -48,8 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTitle"
-            android:textSize="18dp"
+            android:theme="@style/Text_Alex"
             android:text="@string/info_player_2"/>
         <EditText
             android:id="@+id/EditPlayer2"
@@ -67,8 +64,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTitle"
-            android:textSize="18dp"
+            android:theme="@style/Text_Alex"
             android:text="@string/info_player_3"/>
         <EditText
             android:id="@+id/EditPlayer3"
@@ -86,8 +82,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTitle"
-            android:textSize="18dp"
+            android:theme="@style/Text_Alex"
             android:text="@string/info_player_4"/>
         <EditText
             android:id="@+id/EditPlayer4"
@@ -105,8 +100,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTitle"
-            android:textSize="18dp"
+            android:theme="@style/Text_Alex"
             android:text="@string/info_player_5"/>
         <EditText
             android:id="@+id/EditPlayer5"
@@ -119,8 +113,7 @@
 
     <Button
         android:layout_margin="15dp"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@color/colorBackground"
+        android:theme="@style/Button_Alex"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,8 +121,7 @@
         android:onClick="GoToCountFive"/>
     <Button
         android:layout_gravity="center"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@color/colorBackground"
+        android:theme="@style/Button_Alex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Begin"

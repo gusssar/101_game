@@ -3,7 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#b560df</color>
     <color name="colorAccent">#b560df</color>
-    <color name="colorBackground">#cfa7e4</color>
+    <color name="colorBackground">#d3d6f7</color>
     <color name="colorTitle">#593b00</color>
     <color name="colorButton">#4b947d</color>
+    <color name="colorBlue">#16279f</color>
+    <color name="colorRed">#b71c1c</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGold">#ffd700</color>
+    <color name="colorRedWinner">#fa2222</color>
 </resources>

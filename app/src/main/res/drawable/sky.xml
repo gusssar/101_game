@@ -3,9 +3,15 @@
     android:dither="true"
     android:shape="rectangle" >
 
+    <!--
     <gradient
         android:angle="90"
         android:endColor="@color/colorPrimaryDark"
+        android:startColor="@color/colorBackground" />
+    -->
+    <gradient
+        android:angle="90"
+        android:endColor="@color/colorBlue"
         android:startColor="@color/colorBackground" />
 
 </shape>

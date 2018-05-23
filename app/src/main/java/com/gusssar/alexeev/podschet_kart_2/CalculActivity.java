@@ -1,11 +1,14 @@
 package com.gusssar.alexeev.podschet_kart_2;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CalculActivity extends AppCompatActivity {
 
@@ -209,8 +212,8 @@ public class CalculActivity extends AppCompatActivity {
             TOTAL_1 = SCORE_ED_1;
             TOTAL_2 = SCORE_ED_2;
             TOTAL_3 = SCORE_ED_3;
-            TOTAL_4 = TOTAL;
-            TOTAL_5 = SCORE_ED_5;
+            TOTAL_4 = SCORE_ED_4;
+            TOTAL_5 = TOTAL;
         }
 
         /**В зависимости от флага активности*/
@@ -288,4 +291,36 @@ public class CalculActivity extends AppCompatActivity {
 
         }
 
+
+    /**фрагмент для правил игры (количества очков)*/
+
+    final int DIALOG_PRICE = 1;
+
+    public void GoToGamePrice (View v){
+        showDialog(DIALOG_PRICE);
+    }
+
+    protected Dialog onCreateDialog (int id){
+        if (id == DIALOG_PRICE) {
+            AlertDialog.Builder adb = new AlertDialog.Builder(this);
+            adb.setTitle(R.string.PriceTitle);
+            adb.setMessage(R.string.PriceList);
+            adb.setIcon(android.R.drawable.ic_menu_help);
+            return adb.create();
+        }
+        return super.onCreateDialog(id);
+    }
+
+    //при ошибочном нажатии Back
+    private static long back_pressed;
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis())
+            super.onBackPressed();
+        else
+            Toast.makeText(getBaseContext(), R.string.DOUBLE_PRESS_BACK,
+                    Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
+    }
 }

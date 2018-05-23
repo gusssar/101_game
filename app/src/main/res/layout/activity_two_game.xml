@@ -15,17 +15,16 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:paddingTop="15dp"
-            android:layout_margin="15dp"
+            android:paddingTop="7dp"
+            android:layout_margin="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorTitle"
                 android:text="@string/two_game_title"
-                android:textSize="20dp">
+                android:theme="@style/Text_Alex">
             </TextView>
 
         </LinearLayout>
@@ -36,7 +35,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/TextNamePlayer1"
-                android:textColor="@color/colorTitle"
+                android:theme="@style/Text_Alex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -52,10 +51,9 @@
             </EditText>
             <Button
                 android:id="@+id/btn_calc_1"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorBackground"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:theme="@style/Button_Alex"
                 android:text="@string/calc_btn"
                 android:onClick="GoToCalc1"
                 android:textSize="11dp">
@@ -68,7 +66,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/TextNamePlayer2"
-                android:textColor="@color/colorTitle"
+                android:theme="@style/Text_Alex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -83,8 +81,7 @@
             </EditText>
             <Button
                 android:id="@+id/btn_calc_2"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorBackground"
+                android:theme="@style/Button_Alex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/calc_btn"
@@ -100,8 +97,7 @@
 
             <Button
                 android:id="@+id/btnRun"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorBackground"
+                android:theme="@style/Button_Alex"
                 android:layout_weight="2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,8 +106,7 @@
             </Button>
             <Button
                 android:id="@+id/btnClear"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorBackground"
+                android:theme="@style/Button_Alex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -125,7 +120,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_below="@+id/head_block">
@@ -133,18 +128,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp">
+                android:layout_margin="7dp">
                 <TextView
                     android:id="@+id/TextSumPlayer1"
                     android:layout_weight="1"
-                    android:textColor="@color/colorTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:theme="@style/Text_Name_Alex"
                     android:text="Сумма Маши"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"/>
                 <TextView
                     android:layout_weight="1"
+                    android:theme="@style/Text_Score_Alex"
                     android:id="@+id/out_score_first"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -152,18 +148,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp">
+                android:layout_margin="7dp">
                 <TextView
                     android:id="@+id/TextSumPlayer2"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
-                    android:textColor="@color/colorTitle"
+                    android:theme="@style/Text_Name_Alex"
                     android:layout_height="wrap_content"
                     android:text="Сумма Паши"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"/>
                 <TextView
                     android:layout_weight="1"
+                    android:theme="@style/Text_Score_Alex"
                     android:id="@+id/out_score_second"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -174,7 +171,7 @@
     <ImageButton
         android:id="@+id/imageButtonPrice"
         android:layout_margin="15dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:theme="@style/Button_Alex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="GoToGamePrice"

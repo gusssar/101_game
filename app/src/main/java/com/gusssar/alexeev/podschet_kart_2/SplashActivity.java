@@ -17,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__splash);
 
-        /**Анимация левого лица*/
+        /**Анимация лэйбла*/
         // Получим ссылку на эмблему
         ImageView sunImageView = (ImageView) findViewById(R.id.label);
         // Анимация для эмблемы
