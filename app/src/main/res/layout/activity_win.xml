@@ -57,20 +57,60 @@
         android:src="@drawable/win_title_3"
         android:padding="20dp"
         />
+    <ImageView
+        android:id="@+id/shine_empty"
+        android:layout_width="220dp"
+        android:layout_height="352dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="230dp"
+        android:src="@drawable/shine_empty" />
 
     <ImageView
+        android:id="@+id/shine_blue_half"
+        android:layout_width="220dp"
+        android:layout_height="352dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="230dp"
+        android:src="@drawable/shine_blue_half" />
+
+    <!--
+    <ImageView
+        android:id="@+id/shine_blue_full"
+        android:layout_width="220dp"
+        android:layout_height="352dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="230dp"
+        android:src="@drawable/shine_blue_full" />
+
+        <ImageView
+            android:id="@+id/shine_red_half"
+            android:layout_width="220dp"
+            android:layout_height="352dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="230dp"
+            android:src="@drawable/shine_red_half" />
+        <ImageView
+            android:id="@+id/shine_red_full"
+            android:layout_width="220dp"
+            android:layout_height="352dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="230dp"
+            android:src="@drawable/shine_red_full" />
+        -->
+
+    <ImageView
+        android:id="@+id/man"
         android:layout_width="220dp"
         android:layout_height="352dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="230dp"
         android:src="@drawable/winner_man" />
-    <ImageView
-        android:layout_width="220dp"
-        android:layout_height="352dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="230dp"
-        android:src="@drawable/shine_full" />
+
 
 </RelativeLayout>

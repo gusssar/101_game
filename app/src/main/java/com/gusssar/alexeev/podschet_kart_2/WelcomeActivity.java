@@ -109,4 +109,10 @@ public class WelcomeActivity extends AppCompatActivity {
             }
             return adb.create();
         }
+
+    public void Test(View view) {
+        Intent intent = new Intent(this, WinActivity.class);
+        intent.putExtra("player_name", "тест");
+        startActivity(intent);
+    }
 }

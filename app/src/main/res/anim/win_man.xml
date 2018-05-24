@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="1400"
+    android:duration="2000"
     android:fillAfter="true"
     android:interpolator="@android:anim/accelerate_decelerate_interpolator"
     android:shareInterpolator="false" >
 
+    <!--управляет размером объекта-->
     <scale
-        android:fromXScale="0.6"
-        android:fromYScale="0.6"
+        android:fromXScale="0.1"
+        android:fromYScale="0.1"
         android:pivotX="50%"
         android:pivotY="50%"
         android:toXScale="1"
         android:toYScale="1" />
 
+    <!-- управляет положением объекта -->
     <translate
-        android:fromYDelta="70%p"
-        android:toYDelta="10%p" />
+        android:fromXDelta="90%"
+        android:toXDelta="0%"
+        android:fromYDelta="20%"
+        android:toYDelta="0%"/>
 
 
     <!-- альфа управляет прозрачностью объекта -->
     <alpha
-        android:fromAlpha="0.3"
+        android:fromAlpha="0.0"
         android:toAlpha="1.0" />
 </set>
