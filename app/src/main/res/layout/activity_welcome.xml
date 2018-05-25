@@ -86,13 +86,14 @@
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-            <Button
+       <!--     <Button
                 android:id="@+id/Test"
                 android:layout_width="wrap_content"
                 android:layout_height="47dp"
                 android:onClick="Test"
                 android:text="тест"
                 />
+                -->
         <Button
             android:theme="@style/Button_Alex"
             android:id="@+id/GameInfo"

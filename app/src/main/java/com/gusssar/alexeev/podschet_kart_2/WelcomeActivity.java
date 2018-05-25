@@ -109,10 +109,11 @@ public class WelcomeActivity extends AppCompatActivity {
             }
             return adb.create();
         }
-
+/** для тестировки внимации выйгрыша
     public void Test(View view) {
         Intent intent = new Intent(this, WinActivity.class);
         intent.putExtra("player_name", "тест");
         startActivity(intent);
     }
+ */
 }

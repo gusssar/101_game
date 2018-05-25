@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="ШМШМШМШМШМ"
+        android:text="ШМШМШММ"
         android:paddingBottom="25dp"
         android:textColor="@color/colorRedWinner"
         android:textSize="30dp" />
@@ -57,6 +57,27 @@
         android:src="@drawable/win_title_3"
         android:padding="20dp"
         />
+
+    <ImageView
+        android:id="@+id/egg_title_1"
+        android:layout_width="84dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="78dp"
+        android:src="@drawable/win_egg_1" />
+
+    <ImageView
+        android:id="@+id/egg_title_2"
+        android:layout_width="84dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="78dp"
+        android:src="@drawable/win_egg_2" />
+ <!--
     <ImageView
         android:id="@+id/shine_empty"
         android:layout_width="220dp"
@@ -65,7 +86,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="230dp"
         android:src="@drawable/shine_empty" />
-
+-->
     <ImageView
         android:id="@+id/shine_blue_half"
         android:layout_width="220dp"
@@ -75,7 +96,7 @@
         android:layout_marginTop="230dp"
         android:src="@drawable/shine_blue_half" />
 
-    <!--
+
     <ImageView
         android:id="@+id/shine_blue_full"
         android:layout_width="220dp"
@@ -84,24 +105,24 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="230dp"
         android:src="@drawable/shine_blue_full" />
-
-        <ImageView
-            android:id="@+id/shine_red_half"
-            android:layout_width="220dp"
-            android:layout_height="352dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="230dp"
-            android:src="@drawable/shine_red_half" />
-        <ImageView
-            android:id="@+id/shine_red_full"
-            android:layout_width="220dp"
-            android:layout_height="352dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="230dp"
-            android:src="@drawable/shine_red_full" />
-        -->
+    <!--
+            <ImageView
+                android:id="@+id/shine_red_half"
+                android:layout_width="220dp"
+                android:layout_height="352dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="230dp"
+                android:src="@drawable/shine_red_half" />
+            <ImageView
+                android:id="@+id/shine_red_full"
+                android:layout_width="220dp"
+                android:layout_height="352dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="230dp"
+                android:src="@drawable/shine_red_full" />
+            -->
 
     <ImageView
         android:id="@+id/man"
@@ -110,6 +131,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="230dp"
+        android:longClickable="true"
         android:src="@drawable/winner_man" />
 
 
