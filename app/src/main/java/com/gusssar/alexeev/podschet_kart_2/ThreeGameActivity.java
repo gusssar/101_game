@@ -97,11 +97,6 @@ public class ThreeGameActivity extends AppCompatActivity implements OnClickListe
 
         String TOAST_TO_ZERO = getResources().getString(R.string.TOAST_TO_ZERO);
 
-        /** не нужно
-         Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки первого игрока
-         Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки второго игрока
-         Integer SCORE_3 = getIntent().getExtras().getInt("SCORE_3");//очки третьего игрока
-         */
 
         switch (v.getId()) {
 

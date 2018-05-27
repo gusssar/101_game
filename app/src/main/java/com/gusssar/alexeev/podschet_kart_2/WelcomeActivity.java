@@ -41,8 +41,6 @@ public class WelcomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
- //   public void GoToGameInfo(View view) {
- //   }
 
     /** Процедура управления кнопкой назад*/
    @Override

@@ -3,7 +3,6 @@ package com.gusssar.alexeev.podschet_kart_2;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -43,7 +42,6 @@ public class WinActivity extends Activity {
         ImageView manImageView = (ImageView) findViewById(R.id.man);
         Animation manAnimation = AnimationUtils.loadAnimation(this, R.anim.win_man);
         manImageView.startAnimation(manAnimation);
-/**не понятно, необходимо доработать*/
         ImageView shine_bh_ImageView = (ImageView) findViewById(R.id.shine_blue_half);
         ImageView shine_bf_ImageView = (ImageView) findViewById(R.id.shine_blue_full);
             Animation shine_bh_Animation = AnimationUtils.loadAnimation(this, R.anim.win_shine);
@@ -53,14 +51,14 @@ public class WinActivity extends Activity {
                     shine_bh_ImageView.startAnimation(shine_bh_Animation);
                     shine_bf_ImageView.startAnimation(shine_bf_Animation);
 
-
+/**
         manImageView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 WinEgg();
                 return true;
             }
-        });
+        }); */
     }
 
         public void GoToBegin (View view){
@@ -69,7 +67,7 @@ public class WinActivity extends Activity {
         }
 
 
-
+/**
     public void WinEgg() {
         ImageView egg_1_ImageView = (ImageView) findViewById(R.id.egg_title_1);
         ImageView egg_2_ImageView = (ImageView) findViewById(R.id.egg_title_2);
@@ -81,7 +79,7 @@ public class WinActivity extends Activity {
                     egg_2_ImageView.startAnimation(egg_2_Animation);
 
     }
-
+*/
     //при ошибочном нажатии Back
     private static long back_pressed;
 

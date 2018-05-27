@@ -23,14 +23,6 @@ public class FourNameActivity extends AppCompatActivity {
         EditText EditPlayer3 = (EditText) findViewById(R.id.EditPlayer3);
         EditText EditPlayer4 = (EditText) findViewById(R.id.EditPlayer4);
 
-        /**проба с помощью цикла и массива
-
-         int numb_of_player = 4;
-         for (int i=1; i < numb_of_player + 1; i++)
-         {
-         EditText EditPlayer[i] = (EditText) findViewById(R.id.EditPlayer[i]);
-         }
-         */
         if (TextUtils.isEmpty(EditPlayer1.getText().toString()) ||
                 TextUtils.isEmpty(EditPlayer2.getText().toString()) ||
                 TextUtils.isEmpty(EditPlayer3.getText().toString()) ||

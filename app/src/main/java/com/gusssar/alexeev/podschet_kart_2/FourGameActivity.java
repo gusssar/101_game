@@ -109,15 +109,6 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
 
         String TOAST_TO_ZERO= getResources().getString(R.string.TOAST_TO_ZERO);
 
-        /** не нужно
-        Integer SCORE_1 = getIntent().getExtras().getInt("SCORE_1");//очки первого игрока
-        Integer SCORE_2 = getIntent().getExtras().getInt("SCORE_2");//очки второго игрока
-        Integer SCORE_3 = getIntent().getExtras().getInt("SCORE_3");//очки третьего игрока
-        Integer SCORE_4 = getIntent().getExtras().getInt("SCORE_4");//очки четвертого игрока
-         */
-
-
-
         switch (v.getId()) {
 
             case R.id.btnRun:
@@ -185,37 +176,30 @@ public class FourGameActivity extends AppCompatActivity implements OnClickListen
                             SCORE_2 > 101 &&
                             SCORE_3 > 101 &&
                             SCORE_4 > 101) {
-                        //здесь должна быть ссылка на проигрыш всех Death.class
-//                    Toast toast = Toast.makeText(getApplicationContext(), "Камон! Такого не бывает! Давай сначала!", Toast.LENGTH_LONG);
-//                    toast.show();
                         Intent intent = new Intent(this, WelcomeActivity.class);
                         startActivity(intent);
                     }
 
                     /**У всех кроме одного*/
                     if (SCORE_2 > 101 && SCORE_3 > 101 && SCORE_4 > 101) {
-                        //здесь должна быть ссылка на выигранную игру Win.class
                         //передача имени игрока 1
                         Intent intent = new Intent(this, WelcomeActivity.class);
                         intent.putExtra("player_name", player_name_1);
                         startActivity(intent);
                     }
                     if (SCORE_1 > 101 && SCORE_3 > 101 && SCORE_4 > 101) {
-                        //здесь должна быть ссылка на выигранную игру Win.class
                         //передача имени игрока 2
                         Intent intent = new Intent(this, WelcomeActivity.class);
                         intent.putExtra("player_name", player_name_2);
                         startActivity(intent);
                     }
                     if (SCORE_1 > 101 && SCORE_2 > 101 && SCORE_4 > 101) {
-                        //здесь должна быть ссылка на выигранную игру Win.class
                         //передача имени игрока 3
                         Intent intent = new Intent(this, WelcomeActivity.class);
                         intent.putExtra("player_name", player_name_3);
                         startActivity(intent);
                     }
                     if (SCORE_1 > 101 && SCORE_2 > 101 && SCORE_3 > 101) {
-                        //здесь должна быть ссылка на выигранную игру Win.class
                         //передача имени игрока 4
                         Intent intent = new Intent(this, WelcomeActivity.class);
                         intent.putExtra("player_name", player_name_4);

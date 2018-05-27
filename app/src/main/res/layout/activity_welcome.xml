@@ -86,7 +86,9 @@
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-       <!--     <Button
+
+            <!-- тест конечной анимации
+        <Button
                 android:id="@+id/Test"
                 android:layout_width="wrap_content"
                 android:layout_height="47dp"
