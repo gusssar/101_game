@@ -48,5 +48,16 @@
         android:layout_marginRight="15dp"
         android:src="@drawable/ic_face_right" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ver"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#63FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:textSize="12dp"
+        android:layout_alignParentRight="true"/>
+
 
 </RelativeLayout>

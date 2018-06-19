@@ -19,10 +19,10 @@
         <activity android:name=".WelcomeActivity" />
         <activity
             android:name=".TwoNameActivity"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateVisible" />
         <activity
             android:name=".ThreeNameActivity"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateVisible" />
         <activity
             android:name=".TwoGameActivity"
             android:windowSoftInputMode="stateHidden" />
@@ -31,13 +31,13 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".FourNameActivity"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateVisible" />
         <activity
             android:name=".FourGameActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".FiveNameActivity"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateVisible" />
         <activity
             android:name=".FiveGameActivity"
             android:windowSoftInputMode="stateHidden" />
